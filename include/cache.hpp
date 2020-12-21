@@ -16,7 +16,8 @@ class Experiment {
   void Strait();
   void Reverse();
   void Random();
-  friend std::ostream& operator<<(std::ostream& out, const Experiment& experiment);
+  friend std::ostream& operator<<(std::ostream& out,
+                                  const Experiment& experiment);
 
  private:
   std::string travel_type;

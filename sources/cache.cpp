@@ -31,9 +31,8 @@ void Experiment::Strait() {
     }
     clock_t end_travel = clock();
     travelTime.push_back(static_cast<double>(end_travel - start_travel) /
-                          CLOCKS_PER_SEC * experimentsNum);
+                         CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
-    ++plodder;
   }
 }
 
@@ -56,9 +55,8 @@ void Experiment::Reverse() {
     }
     clock_t end_travel = clock();
     travelTime.push_back(static_cast<double>(end_travel - start_travel) /
-                          CLOCKS_PER_SEC * experimentsNum);
+                         CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
-    ++plodder;
   }
 }
 
@@ -88,7 +86,6 @@ void Experiment::Random() {
     travelTime.push_back(static_cast<double>(endTravel - startTravel) /
                          CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
-    ++plodder;
   }
 }
 
@@ -100,7 +97,8 @@ std::ostream& operator<<(std::ostream& out, const Experiment& experiment) {
     out << "\t- experiment: \n"
         << "\t\tnumber: " << i + 1 << "\n"
         << "\t\tinput_data:\n"
-        << "\t\t\tbuffer_size: " << experiment.sizeContainer[i] / Kilobyte << "KB\n"
+        << "\t\t\tbuffer_size: " << experiment.sizeContainer[i] / Kilobyte
+        << "KB\n"
         << "\t\tresults:\n"
         << "\t\t\tduration: " << experiment.travelTime[i] << "ms\n";
   }
