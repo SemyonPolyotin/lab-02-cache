@@ -86,7 +86,7 @@ void Experiment::Random() {
     }
     clock_t endTravel = clock();
     travelTime.push_back(static_cast<double>(endTravel - startTravel) /
-                          CLOCKS_PER_SEC * experimentsNum);
+                         CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
     ++plodder;
   }
