@@ -77,7 +77,7 @@ void Experiment::Random() {
     }
     std::random_device rd;
     std::mt19937 rnd(rd());
-    std::shuffle(randValues.begin(), randValues.end(), rnd);
+    shuffle(randValues.begin(), randValues.end(), rnd);
     clock_t startTravel = clock();
     for (size_t n = 0; n < experimentsNum; ++n) {
       for (const auto& index : randValues) {
