@@ -69,23 +69,23 @@ void Experiment::Random() {
     travelTime.clear();
   }
   for (const size_t& i : sizeContainer) {
-    std::vector<size_t> rand_values;
+    std::vector<size_t> randValues;
     int* arr = new int[i / 4];
     for (size_t j = 0; j < i / 4; j += offset) {
       plodder = arr[j];
-      rand_values.push_back(j);
+      randValues.push_back(j);
     }
     std::random_device rd;
     std::mt19937 rnd(rd());
-    std::shuffle(rand_values.begin(), rand_values.end(), rnd);
-    clock_t start_travel = clock();
+    std::shuffle(randValues.begin(), randValues.end(), rnd);
+    clock_t startTravel = clock();
     for (size_t n = 0; n < experimentsNum; ++n) {
-      for (const auto& index : rand_values) {
+      for (const auto& index : randValues) {
         plodder = arr[index];
       }
     }
-    clock_t end_travel = clock();
-    travelTime.push_back(static_cast<double>(end_travel - start_travel) /
+    clock_t endTravel = clock();
+    travelTime.push_back(static_cast<double>(endTravel - startTravel) /
                           CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
     ++plodder;
