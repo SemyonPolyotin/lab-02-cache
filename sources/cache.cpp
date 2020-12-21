@@ -2,6 +2,7 @@
 
 #include "cache.hpp"
 
+#include <algorithm>
 #include <random>
 const size_t offset = 16;
 const size_t experimentsNum = 1000;
