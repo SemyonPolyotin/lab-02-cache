@@ -33,6 +33,7 @@ void Experiment::Strait() {
     travelTime.push_back(static_cast<double>(end_travel - start_travel) /
                          CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
+    ++plodder;
   }
 }
 
@@ -57,6 +58,7 @@ void Experiment::Reverse() {
     travelTime.push_back(static_cast<double>(end_travel - start_travel) /
                          CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
+    ++plodder;
   }
 }
 
@@ -86,6 +88,7 @@ void Experiment::Random() {
     travelTime.push_back(static_cast<double>(endTravel - startTravel) /
                          CLOCKS_PER_SEC * experimentsNum);
     delete[] arr;
+    ++plodder;
   }
 }
 
